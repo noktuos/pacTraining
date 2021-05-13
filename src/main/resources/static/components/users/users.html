@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+</head>
+<body data-ng-app="pac" data-ng-controller="UserController">
+    <p>{{users}}</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="user in users">
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.password}}</td>
+                <td>{{user.imagen}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+    <h1> El {{chechue.username}} es amoroso</h1>
+</body>
+<!-- Lib -->
+<script src="/lib/jquery/jquery-3.6.0.min.js"></script>
+<script src="/lib/bootstrap/bootstrap.min.js"></script>
+<script src="/lib/angular/angular.min.js"></script>
+<!-- Controller -->
+<script src="/components/app.js"></script>
+<script src="/components/users/userController.js"></script>
+<script src="/components/users/userFactory.js"></script>
+</html>
